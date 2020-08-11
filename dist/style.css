@@ -190,7 +190,7 @@ button:hover {
   /*spinner css end*/
 
 @media 
-only screen and (max-width: 760px) {
+only screen and (max-width: 500px) {
     table thead {
         display: none;
       }
