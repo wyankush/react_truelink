@@ -18,7 +18,7 @@ class AllPosts extends React.Component {
 
     render() {
         return (
-            <div className="container">
+            <div className="container margin-b-50">
                 <div className="text-center">
                     <h1>All Posts</h1>
                 </div>
