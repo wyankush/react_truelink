@@ -1,8 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
+import MainPage from './mainPage.jsx';
 
 
 ReactDOM.render(
-    <h1>start here</h1>,
+    <MainPage />,
     document.getElementById('app')
   );

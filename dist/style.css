@@ -1,0 +1,108 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #F7F9F9 ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+table th,table td {
+    padding: 10px;
+    font-size: 16px;
+}
+
+table thead tr{
+    background-color: #36304a;
+    color: #fff;
+}
+
+table tbody tr {
+    color: #808080;
+    cursor: pointer;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr:hover {
+    color: #555555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.post-title {
+    background: rgb(82, 124, 235);
+    padding: 50px 0;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.padding-left-15 {
+    padding-left: 15px;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.v-align-top {
+    vertical-align: top;
+}
+
+.margin-b-5 {
+    margin-bottom: 5px;
+}
+
+.small-font {
+    font-size: 12px;
+}
+
+.content {
+    max-width: 700px;
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+span {
+    font-size: 16px;
+}
+
+@media 
+only screen and (max-width: 760px) {
+    table thead {
+        display: none;
+      }
+      table td {
+        display: flex;
+      }
+      
+      table td::before {
+        font-weight: bold;
+        width: 120px;
+        min-width: 120px;
+      }
+
+    td:nth-of-type(1):before { content: "Id"; }
+	td:nth-of-type(2):before { content: "UserId"; }
+	td:nth-of-type(3):before { content: "Title"; }
+}
