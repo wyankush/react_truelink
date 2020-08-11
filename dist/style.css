@@ -1,6 +1,8 @@
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 body {
@@ -25,7 +27,7 @@ table th,table td {
 }
 
 table thead tr{
-    background-color: #36304a;
+    background-color: #527ceb;
     color: #fff;
 }
 
@@ -49,7 +51,7 @@ tbody tr:hover {
 }
 
 .post-title {
-    background: rgb(82, 124, 235);
+    background: #527ceb;
     padding: 50px 0;
 }
 
@@ -77,15 +79,115 @@ tbody tr:hover {
     font-size: 12px;
 }
 
+.micro-font {
+    font-size: 10px;
+}
+
 .content {
     max-width: 700px;
-    padding-top: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     margin: 0 auto;
+}
+
+.margin-b-50 {
+    margin-bottom: 50px;
+}
+
+.margin-t-50 {
+    margin-top: 50px;
 }
 
 span {
     font-size: 16px;
 }
+
+.font-bold {
+    font-weight: bold;
+}
+
+a {
+    color: #808080;
+}
+
+a:hover {
+    color: #555555;
+}
+
+.secondary-font-color {
+    color: #808080;
+}
+
+button {
+    border: 1px solid #527ceb;
+    background: transparent;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #527ceb;
+    cursor: pointer;
+}
+
+button:hover {
+    color:  #194dd8;
+    border: 1px solid #194dd8;
+}
+
+
+/* Spinner css*/
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+  }
+  
+  .spinner > div {
+    background-color: #808080;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  }
+  
+  .spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+  }
+  
+  .spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  .spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+  }
+  
+  .spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+  }
+  
+  @-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    20% { -webkit-transform: scaleY(1.0) }
+  }
+  
+  @keyframes sk-stretchdelay {
+    0%, 40%, 100% { 
+      transform: scaleY(0.4);
+      -webkit-transform: scaleY(0.4);
+    }  20% { 
+      transform: scaleY(1.0);
+      -webkit-transform: scaleY(1.0);
+    }
+  }
+
+  /*spinner css end*/
 
 @media 
 only screen and (max-width: 760px) {
@@ -105,4 +207,12 @@ only screen and (max-width: 760px) {
     td:nth-of-type(1):before { content: "Id"; }
 	td:nth-of-type(2):before { content: "UserId"; }
 	td:nth-of-type(3):before { content: "Title"; }
+}
+
+@media 
+only screen and (max-width: 1024px) {
+    .post-details .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

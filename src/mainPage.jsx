@@ -9,7 +9,8 @@ class MainPage extends React.Component {
 
         this.state = {
             showAll: true,
-            allPosts: []
+            allPosts: [],
+            loading: true
         }
 
         this.users = [];
@@ -19,9 +20,13 @@ class MainPage extends React.Component {
         this.onPostClick = this.onPostClick.bind(this);
         this.fetchPosts = this.fetchPosts.bind(this);
         this.fetchUsers = this.fetchUsers.bind(this);
+        this.onAllPosts = this.onAllPosts.bind(this);
     }
 
     componentDidMount() {
+        /* These API calls can be shifted to individual components if the data changes are quite often
+        *   Assuming that new posts and user changes is not a frequent activity
+        */
         this.fetchPosts();
         this.fetchUsers();
     }
@@ -31,7 +36,8 @@ class MainPage extends React.Component {
             .then(response => response.json())
             .then(json => {
                 this.setState({
-                    allPosts: json
+                    allPosts: json,
+                    loading: false
                 });
             });
     }
@@ -47,8 +53,6 @@ class MainPage extends React.Component {
         const posts = this.state.allPosts;
         const users = this.users;
         let userId = -1;
-        let postDetails;
-        let userDetails;
         for(let i in posts) {
             if(posts[i].id == pPostId) {
                 userId = posts[i].userId;
@@ -68,20 +72,24 @@ class MainPage extends React.Component {
             this.setState({
                 showAll: false
             });
-        }
-        
+        }    
+    }
+
+    onAllPosts() {
+        this.setState({
+            showAll: true
+        });
     }
 
     render() {
         return ( 
-            <div>
+            <React.Fragment>
                 {this.state.showAll == true ? 
-                    <AllPosts onPostClick={this.onPostClick} posts={this.state.allPosts}/> 
+                    <AllPosts onPostClick={this.onPostClick} posts={this.state.allPosts} loading={this.state.loading}/> 
                 :
-                    <Post postDetails={this.postDetails} userDetails={this.userDetails}/>
+                    <Post postDetails={this.postDetails} userDetails={this.userDetails} onAllPosts={this.onAllPosts}/>
                 }
-                
-            </div>
+            </React.Fragment>
         );
     }
 }
