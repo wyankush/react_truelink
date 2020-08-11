@@ -45,7 +45,7 @@ class Post extends React.Component {
                             <span> {this.props.postDetails.body} </span>
                         </div>
                         <hr />
-                        <div className="margin-t-50">
+                        <div className="margin-t-50 author-div">
                             <img src="./img/avatar.jpg" width="80" height="80" style={{"borderRadius": "50%"}}/>
                             <div className="padding-left-15 display-inline-block v-align-top">
                                 <div className="margin-b-5 font-bold"><span>{this.props.userDetails.name}</span></div>
