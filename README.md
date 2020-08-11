@@ -1,2 +1,2 @@
 # react_truelink
-Assignment front end
+Assignment frontend
